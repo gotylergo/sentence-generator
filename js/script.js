@@ -140,7 +140,7 @@ const pronouns = [
   'that',
 ]
 
-const adjective = [
+const adjectives = [
   'mellow',
   'damaged',
   'crowded',
@@ -192,13 +192,24 @@ const adjective = [
   'magenta',
 ]
 
+function getRandom(arr) {
+  return arr[Math.floor(Math.random() * Math.floor(arr.length))];
+}
+
 function createSentence() {
-  let pronoun;
-  let verb;
-  let adjective;
-  let noun;
+
+  let pronoun = getRandom(pronouns);
+  let verb = getRandom(verbs);
+  let adjective = getRandom(adjectives);
+  let noun = getRandom(nouns);
 
   let sentence = `${pronoun} ${verb} ${adjective} ${noun}.`;
-  
+
+  sentence = sentence[0].toUpperCase() + sentence.substring(1);
+
   return sentence;
 }
+
+document.getElementById('btn-new-sentence').onclick = function () {
+  document.getElementById('sentence').innerHTML = createSentence();
+};
