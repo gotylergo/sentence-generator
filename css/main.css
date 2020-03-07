@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: linear-gradient(#212F3C, #34495E);
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  color: #F2F3F4;
+}
+.container {
+  text-align: center;
+}
+#btn-new-sentence {
+  background: #FFA07A;
+  border: 0;
+  border-radius: 7px;
+}
